@@ -2,13 +2,15 @@
 
 int main() {
   char mensagem[100];
+  int i;
 
   printf("Digite a mensagem: ");
-  fgets(mensagem, sizeof(mensagem), stdin);
+  scanf(" %[^\n]", &mensagem);
+  
 
   printf("Mensagem em codigo Morse:\n");
 
-  for (int i = 0; mensagem[i] != '\0'; i++) {
+  for (i = 0; mensagem[i] != '\0'; i++) {
     switch (mensagem[i]) {
       case 'a':
       case 'A':
@@ -192,3 +194,4 @@ int main() {
   printf("\n");
   return 0;
 }
+
